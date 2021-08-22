@@ -5,9 +5,11 @@ ScriptsOnlyBuild:
     - Dragon
     - DragonBullet
     - GameManager
+    - LevelData
     - Shoot
     - Spawn
     - TargetSpawn
+    - TitleManager
     - csDestroyEffect
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -17,7 +19,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
-    - TMPro.TextMeshPro
     Unity.XR.ARCore.Editor.dll:
     - UnityEditor.XR.ARCore.ARCoreSettings
     Unity.XR.ARCore.dll:
@@ -34,6 +35,13 @@ ScriptsOnlyBuild:
     Unity.XR.Management.dll:
     - UnityEngine.XR.Management.XRGeneralSettings
     - UnityEngine.XR.Management.XRManagerSettings
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -45,6 +53,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Outline
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -65,8 +74,6 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
@@ -97,57 +104,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1518}
     - Class: 114
-      Script: {instanceID: 1644}
+      Script: {instanceID: 1656}
     - Class: 114
-      Script: {instanceID: 1652}
+      Script: {instanceID: 1664}
     - Class: 114
-      Script: {instanceID: 1712}
+      Script: {instanceID: 1724}
     - Class: 114
-      Script: {instanceID: 2168}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 2588}
+      Script: {instanceID: 2630}
     - Class: 114
-      Script: {instanceID: 2618}
+      Script: {instanceID: 2852}
     - Class: 114
-      Script: {instanceID: 2840}
+      Script: {instanceID: 3138}
     - Class: 114
-      Script: {instanceID: 3126}
+      Script: {instanceID: 3320}
     - Class: 114
-      Script: {instanceID: 3308}
+      Script: {instanceID: 3752}
     - Class: 114
-      Script: {instanceID: 3586}
+      Script: {instanceID: 3782}
     - Class: 114
-      Script: {instanceID: 3740}
+      Script: {instanceID: 5500}
     - Class: 114
-      Script: {instanceID: 3770}
+      Script: {instanceID: 5638}
     - Class: 114
-      Script: {instanceID: 4084}
+      Script: {instanceID: 5810}
     - Class: 114
-      Script: {instanceID: 4194}
+      Script: {instanceID: 5840}
     - Class: 114
-      Script: {instanceID: 4470}
+      Script: {instanceID: 6314}
     - Class: 114
-      Script: {instanceID: 5216}
+      Script: {instanceID: 6616}
     - Class: 114
-      Script: {instanceID: 5488}
+      Script: {instanceID: 7392}
     - Class: 114
-      Script: {instanceID: 5626}
+      Script: {instanceID: 7424}
     - Class: 114
-      Script: {instanceID: 5798}
+      Script: {instanceID: 7428}
     - Class: 114
-      Script: {instanceID: 5828}
+      Script: {instanceID: 8000}
     - Class: 114
-      Script: {instanceID: 6302}
-    - Class: 114
-      Script: {instanceID: 6604}
-    - Class: 114
-      Script: {instanceID: 7378}
-    - Class: 114
-      Script: {instanceID: 7410}
-    - Class: 114
-      Script: {instanceID: 7984}
-    - Class: 114
-      Script: {instanceID: 8234}
+      Script: {instanceID: 8250}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -165,6 +162,79 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Title.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1518}
+    - Class: 114
+      Script: {instanceID: 2180}
+    - Class: 114
+      Script: {instanceID: 2630}
+    - Class: 114
+      Script: {instanceID: 2852}
+    - Class: 114
+      Script: {instanceID: 3138}
+    - Class: 114
+      Script: {instanceID: 4096}
+    - Class: 114
+      Script: {instanceID: 4206}
+    - Class: 114
+      Script: {instanceID: 4482}
+    - Class: 114
+      Script: {instanceID: 5228}
+    - Class: 114
+      Script: {instanceID: 5500}
+    - Class: 114
+      Script: {instanceID: 5810}
+    - Class: 114
+      Script: {instanceID: 6314}
+    - Class: 114
+      Script: {instanceID: 6680}
+    - Class: 114
+      Script: {instanceID: 6926}
+    - Class: 114
+      Script: {instanceID: 7428}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -1239,6 +1309,12 @@ ScriptsOnlyBuild:
     className: PlayModeRunnerCallback
   - hash:
       serializedVersion: 2
+      Hash: 99bf23129e8b8ee249fc125ef9bd1104
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TitleManager
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1341,6 +1417,12 @@ ScriptsOnlyBuild:
     className: Shoot
   - hash:
       serializedVersion: 2
+      Hash: cc560a463228beaed93030640a0d386f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelData
+  - hash:
+      serializedVersion: 2
       Hash: 040dd48e3a027d5424519a5fa2009df4
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1437,7 +1519,7 @@ ScriptsOnlyBuild:
     className: ARRaycastManager
   - hash:
       serializedVersion: 2
-      Hash: e281de2929f949702311bcdea94d0ba6
+      Hash: d3448a46f1f09ad81eca3e29966f97c7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1503,5 +1585,6 @@ ScriptsOnlyBuild:
     className: csDestroyEffect
   platform: 13
   scenePathNames:
+  - Assets/Scenes/Title.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Users/idonghui/Desktop/unity/argame/AR.apk
+  playerPath: /Users/idonghui/Documents/ArCannon.apk
