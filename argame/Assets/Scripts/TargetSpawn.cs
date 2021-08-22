@@ -12,18 +12,20 @@ public class TargetSpawn : MonoBehaviour
 
     private void Start()
     {
-
         SpawnTarget();
     }
 
 
     public void SpawnTarget()
     {
-        nextBall = Instantiate(targetBallon[Random.Range(0, 3)], targetPos.position, Quaternion.identity);
+        nextBall = targetBallon[Random.Range(0, 3)];
+
+        nextBall.SetActive(true);
     }
 
     public void ShootBomb()
     {
+        nextBall.SetActive(false);
         SpawnTarget();
     }
 }

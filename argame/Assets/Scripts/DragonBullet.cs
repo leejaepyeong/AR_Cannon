@@ -31,7 +31,6 @@ public class DragonBullet : MonoBehaviour
     {
         if(other.name == "Life")
         {
-            Debug.Log("Hit");
 
             StartCoroutine(BulletHit());
         }

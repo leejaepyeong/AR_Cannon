@@ -22,9 +22,18 @@ public class Spawn : MonoBehaviour
 
             for (int i = 0; i < 5; i++)
             {
-                if (Random.Range(0, 3) == 0)
-                    break;
+                if(GameManager.instance.GameLevel <= 1)
+                {
+                    if (Random.Range(0, 2) == 0)
+                        break;
+                }
+                else
+                {
+                    if (Random.Range(0, 3) == 0)
+                        break;
+                }
 
+                
                 Instantiate(dragons[Random.Range(0, 3)], pos[i].position, Quaternion.LookRotation(pos[i].forward * -1));
 
             }

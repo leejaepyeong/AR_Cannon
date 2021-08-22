@@ -1702,7 +1702,7 @@ MonoBehaviour:
   Target: {fileID: 0}
   bulletPrefab: {fileID: 100006, guid: 5194e0883c4e84b87bd53caea4c80d4a, type: 3}
   myNum: 2
-  audio: {fileID: 0}
+  audio: {fileID: 6002671921731694672}
   anim: {fileID: 5690153218601638328}
 --- !u!54 &5690153218803573193
 Rigidbody:

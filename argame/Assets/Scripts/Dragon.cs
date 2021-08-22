@@ -46,11 +46,13 @@ public class Dragon : MonoBehaviour
 
         anim.SetTrigger("Attack");
 
+
         yield return new WaitForSeconds(0.3f);
 
         GameObject bullet = Instantiate(bulletPrefab, transform.position + new Vector3(0f,4.9f,-1.5f), Quaternion.identity);
 
         yield return new WaitForSeconds(0.5f);
+
 
         audio.Stop();
 

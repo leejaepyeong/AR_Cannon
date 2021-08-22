@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,8 +22,7 @@ public class GameManager : MonoBehaviour
     public Text ScoreTxt;
     public Image HpBar;
 
-    public TextMeshPro scoreObjects;
-    public GameObject scoreSpawn;
+    public Text scoreObject;
 
     public Text boomCount;
 
@@ -39,10 +37,18 @@ public class GameManager : MonoBehaviour
     public Text EndScoreTxt;
 
 
+    public LevelData levelData;
+    public int GameLevel;
+
     private void Start()
     {
         if (instance == null)
             instance = this;
+
+        GameLevel = levelData.level;
+
+        if (GameLevel == 3)
+            GameTime = 120f;
     }
 
 
@@ -84,8 +90,7 @@ public class GameManager : MonoBehaviour
 
     public void HitOn(int _num)
     {
-        TextMeshPro scoreObject = Instantiate(scoreObjects, scoreSpawn.transform.position, scoreSpawn.transform.rotation);
-
+        
         if (_num == 1)
         {
             scoreObject.text = "+100";
@@ -96,9 +101,16 @@ public class GameManager : MonoBehaviour
             scoreObject.text = "Miss";
         }
 
-        Destroy(scoreObject, 0.85f);
+        StartCoroutine(TextAnim());
 
         
+    }
+
+    IEnumerator TextAnim()
+    {
+        scoreObject.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        scoreObject.gameObject.SetActive(false);
     }
 
     public void Victory()

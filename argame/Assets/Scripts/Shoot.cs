@@ -67,6 +67,10 @@ public class Shoot : MonoBehaviour
 
                 targetSpawn.ShootBomb();
             }
+            else
+            {
+                yield return new WaitForSeconds(0.25f);
+            }
 
             audio.Stop();
         }
@@ -97,6 +101,7 @@ public class Shoot : MonoBehaviour
             Destroy(boom, 0.7f);
         }
 
+        audio.Play();
 
     }
 }
