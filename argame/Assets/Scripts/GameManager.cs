@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
     public void ScoreUp(int _score)
     {
         Score += _score;
-        ScoreTxt.text = Score.ToString();
+        ScoreTxt.text = "Score : " + Score.ToString();
     }
 
     public void HitOn(int _num)
